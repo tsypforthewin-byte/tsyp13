@@ -1,0 +1,7 @@
+steps:
+# Build Docker image for Cloud Functions Gen2
+- name: 'gcr.io/cloud-builders/docker'
+  args: ['build', '-t', 'gcr.io/tsyp-477814/cv-trigger-function', '.']
+
+images:
+- 'gcr.io/tsyp-477814/cv-trigger-function'

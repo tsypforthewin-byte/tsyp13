@@ -1,0 +1,27 @@
+# Core web framework
+fastapi>=0.115.0
+uvicorn[standard]>=0.38.0 # ASGI server
+
+# LangChain components needed for rewriting (OpenAI client)
+langchain-openai==1.0.2
+langchain-core==1.0.3 # Ensure compatibility with langchain-openai 1.0.2
+
+# OpenAI client library (pulled in by langchain-openai)
+openai>=1.109.1,<2.0.0
+
+# For creating DOCX files
+python-docx==1.2.0
+
+# Google Cloud clients
+google-cloud-firestore>=2.11.0,<3.0.0
+google-cloud-storage>=2.10.0,<3.0.0
+
+# Google AI client (might be needed if other parts of the app import genai)
+google-genai>=1.48.0,<2.0.0
+
+# Utilities
+PyYAML==6.0.3
+json-repair==0.52.5
+
+# Google Auth (dependency for GCS/Firestore clients)
+google-auth>=2.15.0,<3.0.0
